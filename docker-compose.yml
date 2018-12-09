@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+    chemical-export-service:
+        container_name: chemical-export-service
+        image: docker.your-company.com/sds/chemical-export-service:latest
+        environment:
+        - TZ=EST
+        - OSDR_LOG_FOLDER=/logs
+        - OSDR_RABBIT_MQ=rabbitmq://guest:guest@rabbitmq:5672/osdr_dev
+        - OSDR_MONGO_DB=mongodb://mongo:27017/osdr_dev
+        volumes:
+        - ${OSDR_LOG_FOLDER}:/logs/
+        build:
+            context: .
+        ports:
+        - 8988:8088
+        networks:
+        - osdr-net-ext
+            
+networks:
+    osdr-net-ext:
+        external:
+            name: osdr-sys-net
