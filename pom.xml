@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sds</groupId>
+    <groupId>com.github.arqisoft</groupId>
     <artifactId>chemical-export-service</artifactId>
     <version>0.13</version>
 
@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <swagger.version>2.4.0</swagger.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <nexus.release.url>https://nexus.your-company.com/repository/maven-releases/</nexus.release.url>
+        <nexus.release.url>https://oss.sonatype.org/service/local/staging/deploy/maven2</nexus.release.url>
     </properties>
 
     <parent>
@@ -45,19 +45,19 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>com.npspot</groupId>
+            <groupId>com.github.arqisoft</groupId>
             <artifactId>jtransit-light</artifactId>
             <version>1.10.35</version>
         </dependency>
         <dependency>
-            <groupId>com.sds</groupId>
+            <groupId>com.github.arqisoft</groupId>
             <artifactId>storage</artifactId>
-            <version>0.15</version>
+            <version>0.16</version>
         </dependency>
         <dependency>
-            <groupId>com.sds</groupId>
+            <groupId>com.github.arqisoft</groupId>
             <artifactId>json-schema-validator</artifactId>
-            <version>${osdr.version}</version>
+            <version>0.14</version>
         </dependency>
 
         <dependency>
@@ -76,7 +76,7 @@
             <version>${swagger.version}</version>
         </dependency>
         <dependency>
-            <groupId>sds</groupId>
+            <groupId>com.github.arqisoft</groupId>
             <artifactId>messaging</artifactId>
             <version>1.1</version>
         </dependency>
@@ -104,12 +104,6 @@
     </build>
 
     <repositories>
-        <!--
-        <repository>
-            <id>aspose-releases</id>
-            <url>https://artifact.aspose.com/repo/</url>
-        </repository>
-        -->
         <repository>
             <id>atlasian-maven-releases</id>
             <url>https://maven.atlassian.com/3rdparty/</url>
@@ -126,6 +120,10 @@
             <id>nexus</id>
             <url>${nexus.release.url}</url>
         </repository>
+        <repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
     </repositories>
 
     <pluginRepositories>
