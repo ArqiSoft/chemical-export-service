@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-    chemical-export-service:
-        container_name: chemical-export-service
-        image: docker.your-company.com/sds/chemical-export-service:latest
+    chemical-export:
+        container_name: chemical-export
+        image: leanda/chemical-export:latest
         environment:
         - TZ=EST
         - OSDR_LOG_FOLDER=/logs
