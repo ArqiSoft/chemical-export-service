@@ -1,5 +1,7 @@
 # Chemical Export Service
 
+[![Build Status](https://travis-ci.org/ArqiSoft/chemical-export-service.svg?branch=master)](https://travis-ci.org/ArqiSoft/chemical-export-service)
+
 ## System Requirements
 
 Java 1.8, Maven 3.x
