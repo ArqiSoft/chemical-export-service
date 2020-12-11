@@ -1,6 +1,6 @@
 # Chemical Export Service
 
-[![Build Status](https://travis-ci.org/ArqiSoft/chemical-export-service.svg?branch=master)](https://travis-ci.org/ArqiSoft/chemical-export-service)
+[![Build Status](https://travis-ci.com/ArqiSoft/chemical-export-service.svg?branch=master)](https://travis-ci.com/ArqiSoft/chemical-export-service)
 
 ## System Requirements
 
